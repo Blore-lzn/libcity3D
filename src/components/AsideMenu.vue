@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import MapContainer from '@/components/MapContainer.vue'
+    import D3TestChart from '@/components/D3TestChart.vue'
 
     import {
         Document,
@@ -57,7 +58,7 @@
             <el-icon>
                 <document />
             </el-icon>
-            <template #title>深度数据分析</template>
+            <template #title>图表数据分析</template>
         </el-menu-item>
         <el-menu-item index="4">
             <el-icon>
@@ -107,7 +108,7 @@
             </template>
         </el-dialog>
 
-        <el-dialog v-model="mapContainerVisible" title="2D地图">
+        <el-dialog v-model="mapContainerVisible" title="2D地图" draggable :modal="false">
             <MapContainer />
             <template #footer>
                 <div class="dialog-footer">
@@ -119,8 +120,8 @@
             </template>
         </el-dialog>
 
-        <el-dialog v-model="graphContainerVisible" title="数据分析">
-            <MapContainer />
+        <el-dialog v-model="graphContainerVisible" title="数据分析" draggable :modal="false">
+            <D3TestChart />
             <template #footer>
                 <div class="dialog-footer">
                     <el-button @click="graphContainerVisible = false">Cancel</el-button>

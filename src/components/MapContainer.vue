@@ -21,6 +21,28 @@
                     zoom: 11, // 初始化地图级别
                     center: [116.397428, 39.90923], // 初始化地图中心点位置
                 });
+                // AMap.plugin("AMap.GeoJSON", function () {
+                //     //创建 geoJSON 实例，传入 GeoJSON 数据和其他选项
+                //     var geoJson = new AMap.GeoJSON({
+                //         //将字符串形式的 GeoJSON 数据解析为对象
+                //         geoJSON: traj_1000,
+                //         //定义一个回调函数来创建多边形对象，该函数接收一个 geojson 对象和一个 lnglats 数组作为参数
+                //         getPolygon: function (geojson, lnglats) {
+                //             // 返回一个新的 AMap.Polygon 对象，传入路径、填充透明度、边框颜色和填充颜色等选项
+                //             //还可以自定义 getMarker 和 getPolyline，用于创建标记和折线对象
+                //             return new AMap.Polygon({
+                //                 path: lnglats,
+                //                 fillOpacity: 0.8,
+                //                 strokeColor: "white",
+                //                 fillColor: "red",
+                //             });
+                //         },
+                //     });
+                //     //将geoJson对象添加到地图上
+                //     map.add(geoJson);
+                // });
+
+
             })
             .catch((e) => {
                 console.log(e);
